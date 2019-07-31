@@ -4,7 +4,12 @@ def run_guessing_game
   puts "Guess a number between 1 and 6"
   guess = gets.chomp
   if random_number == guess 
-    puts 
+    puts `You guessed the correct number!`
+  elsif random_number != guess
+    puts `Sorry! The computer guessed #{random_number}.`
+  elsif guess = exit
+    puts "Goodbye!"
+  end
 end
 - Generate and store a random number between 1 and 6
 - Prompts the user to guess their own number between 1 and 6
