@@ -1,18 +1,29 @@
 # Code your solution here!
 def run_guessing_game
-  random_number = rand(1..6)
-  puts "Guess a number between 1 and 6"
-  guess = gets.chomp
-  if guess == "exit"
-    puts "Goodbye!"
-  elsif random_number == guess 
-    puts "You guessed the correct number!"
-  else
-    puts "Sorry! The computer guessed #{random_number}."
-  end
+  number = random_number 
+  user_prompt
+  guess = input
+  game(guess, number)
 end
 
 def random_number 
  rand(1..6)
 end
  
+def user_prompt
+  puts "Guess a number between 1 and 6"
+end
+
+def input 
+  gets.chomp
+end
+
+def game (guess, number)
+  if guess == "exit"
+    puts "Goodbye!"
+  elsif number == guess 
+    puts "You guessed the correct number!"
+  else
+    puts "Sorry! The computer guessed #{number}."
+  end
+end
