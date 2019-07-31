@@ -2,6 +2,9 @@
 def run_guessing_game
   random_number = rand(1..6)
   puts "Guess a number between 1 and 6"
+  guess = gets.chomp
+  if random_number == guess 
+    puts 
 end
 - Generate and store a random number between 1 and 6
 - Prompts the user to guess their own number between 1 and 6
