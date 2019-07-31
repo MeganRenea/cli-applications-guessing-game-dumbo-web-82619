@@ -15,13 +15,13 @@ def user_prompt
 end
 
 def input 
-  gets.chomp.to_i
+  gets.chomp
 end
 
 def game (guess, number)
   if guess == "exit"
     puts "Goodbye!"
-  elsif number == guess 
+  elsif number == guess.to_i
     puts "You guessed the correct number!"
   else
     puts "Sorry! The computer guessed #{number}."
