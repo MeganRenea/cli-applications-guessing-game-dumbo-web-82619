@@ -15,7 +15,7 @@ def user_prompt
 end
 
 def input 
-  gets.chomp
+  gets.chomp.to_i
 end
 
 def game (guess, number)
